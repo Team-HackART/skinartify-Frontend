@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://riti04-skinartify-backend.hf.space';
+const API_BASE_URL = 'https://aryan195a-skinartify-backend.hf.space';
 
 export interface PredictionResult {
   class: string;
