@@ -1,60 +1,12 @@
 # SkinARTify - AI-Powered Skin Lesion Classification
 
-A comprehensive web application for skin lesion classification using deep learning with DenseNet121 architecture.
+SkinARTify is a full-stack web application for AI-powered skin disease detection using a fine-tuned DenseNet121 model. It provides fast and reliable classification across 7 skin lesion types with an intuitive and responsive interface.
 
 ## 🚀 Quick Start
-
-### Prerequisites
-
-- Node.js (v16 or higher)
-- Python 3.7+ with pip
-- Your trained Keras model file
-
-### Installation
-
-1. **Install frontend dependencies:**
-   ```bash
-   npm install
-   ```
-
-2. **Install backend dependencies:**
-   ```bash
-   cd backend
-   npm install
-   ```
-
-3. **Install Python dependencies:**
-   ```bash
-   pip install tensorflow numpy pillow
-   ```
-
-4. **Place your model:**
-   - Copy your `skinartify_densenet_model.keras` file to `backend/models/`
-
-### Running the Application
-
-**Option 1: Run both frontend and backend together**
-```bash
-npm run dev:full
-```
-
-**Option 2: Run separately**
-
-Terminal 1 (Backend):
-```bash
-cd backend
-npm run dev
-```
-
-Terminal 2 (Frontend):
-```bash
-npm run dev
-```
-
 The application will be available at:
-- Frontend: http://localhost:5173
-- Backend API: http://localhost:5000
-
+- Frontend: [SkinARTify Web App](https://skinartify-frontend.vercel.app/)
+- Backend API: [Hugging Face Space](https://huggingface.co/spaces/aryan195a/SKINARTIFY_backend)
+  
 ## 📁 Project Structure
 
 ```
@@ -77,8 +29,7 @@ skinartify/
 
 ### Model Requirements
 
-Your model should:
-- Be saved as `skinartify_densenet_model.keras`
+The model should:
 - Accept 224x224x3 input images
 - Output predictions for 7 classes in this order:
   1. akiec (Actinic keratoses)
@@ -88,12 +39,6 @@ Your model should:
   5. melanoma (Melanoma)
   6. nevus (Melanocytic nevi)
   7. vasc (Vascular lesions)
-
-### Model Placement
-
-1. Place your `skinartify_densenet_model.keras` file in the `backend/models/` directory
-2. The backend will automatically detect and load your model
-3. If no model is found, the system will use mock predictions for testing
 
 ## 🔧 API Endpoints
 
@@ -110,19 +55,6 @@ Your model should:
 - **Error Handling**: Robust error handling and user feedback
 
 ## 🛠️ Development
-
-### Frontend Development
-```bash
-npm run dev
-```
-
-### Backend Development
-```bash
-cd backend
-npm run dev
-```
-
-### Building for Production
 ```bash
 npm run build
 ```
